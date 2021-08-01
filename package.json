@@ -1,0 +1,27 @@
+{
+  "name": "realtime-chat",
+  "version": "1.0.0",
+  "description": "a realtime chat application made with socket.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "app:dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjuannn/realtime-chat.git"
+  },
+  "author": "juan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jjuannn/realtime-chat/issues"
+  },
+  "homepage": "https://github.com/jjuannn/realtime-chat#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^4.1.3"
+  }
+}
