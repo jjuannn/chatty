@@ -21,6 +21,7 @@ socket.on("new_message", ({ username, message, date }) => {
   $messages_container.scrollTop = $messages_container.scrollHeight;
 });
 
+// listening for "user_typing"
 socket.on("user_typing", (data) => {
   $user_typing.innerHTML = "";
   const userTyping = data;
@@ -31,16 +32,19 @@ socket.on("user_typing", (data) => {
   `;
 });
 
+// listening for "stop_typing"
 socket.on("stop_typing", () => {
   $user_typing.innerHTML = "";
 });
 
 $message_input.addEventListener("keypress", () => {
   const userTyping = $username_input.value ? $username_input.value : "Someone";
+  // emits "user_typing" to the server
   socket.emit("user_typing", userTyping);
 });
 
 $message_input.addEventListener("focusout", () => {
+  // emits "stop_typing" to the server
   socket.emit("stop_typing");
 });
 
