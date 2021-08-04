@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./styles/message.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./styles/global.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./styles/footer.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./styles/title.css"
+    />
+  </head>
+  <body>
+    <section class="title">
+      <span class="title-text">
+        Welcome to <span class="title-name">Chatty</span>
+      </span>
+      <span>
+        <a href="#content"><i class="fas fa-arrow-down"></i></a>
+      </span>
+    </section>
+
+    <main id="content" class="chat">
+      <p class="chat-title">Start chatting now!</p>
+      <section class="chat-inputs">
+        <form id="chat_form">
+          <input
+            required
+            type="text"
+            class="chat-input"
+            id="username"
+            placeholder="Username"
+          />
+          <input
+            required
+            type="text"
+            class="chat-input"
+            id="message"
+            placeholder="Message"
+          />
+          <button type="submit" id="submit-button">Submit</button>
+        </form>
+      </section>
+      <section id="messages-container">
+        <div id="messages">
+          <div class="message">
+            <strong class="message-date">14:05 AM</strong>
+            <p class="message-username">
+              Chatty Bot:
+              <span class="message-content">Welcome to Chatty!</span>
+            </p>
+          </div>
+        </div>
+
+        <div id="user-typing"></div>
+      </section>
+    </main>
+
+    <section class="footer">
+      <span class="footer-content"
+        >Created by
+        <a href="https://github.com/jjuannn" target="_blank" ref="noreferrer">
+          Juan Avero
+        </a>
+      </span>
+    </section>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

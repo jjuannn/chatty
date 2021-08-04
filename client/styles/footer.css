@@ -1,0 +1,12 @@
+.footer {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-content a {
+  color: teal;
+}
+.footer-content a:hover {
+  text-decoration: underline teal;
+}
